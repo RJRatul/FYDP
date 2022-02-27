@@ -9,12 +9,13 @@ const Appbar = ({setPage}) => {
   return <div>
       <AppBar>
       <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={()=> setPage(false)}>
+        <Button color="inherit">Home</Button>
+          <Button variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={()=> setPage(false)}>
             Blog
-          </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={()=> setPage(true)}>
+          </Button>
+          <Button variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={()=> setPage(true)}>
             FAQ
-          </Typography>
+          </Button>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
