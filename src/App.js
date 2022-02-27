@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Appbar setPage={setPage} />
-      {pages ?   <Faq />: <Blog />}
+      {pages ?   <Faq />: <Blog /> }
       
     
     

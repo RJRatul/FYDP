@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import axios from "axios";
+import '../component/Blog.css';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([])
@@ -20,20 +21,25 @@ const Blog = () => {
   useEffect(() => {
     loadBlogs();
   }, []);
-  return (<div>
+  return (<div className='blog'>
+    <h1>
+      BLOG
+    </h1>
     {blogs.map(blog => {
       return (
-        <Card sx={{ maxWidth: 345 }}>
-          {/* <CardMedia
+
+        <Card sx={{ minWidth: 345, minHeight: 100 }} className="blog1">
+          
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div" className='blog2'>
+              {blog.title}
+            </Typography>
+            <CardMedia
             component="img"
             height="140"
             image="/static/images/cards/contemplative-reptile.jpg"
-            alt="green iguana"
-          /> */}
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {blog.title}
-            </Typography>
+            alt="blog"
+          />
             <Typography variant="body2" color="text.secondary">
               {blog.details}
             </Typography>
@@ -42,6 +48,7 @@ const Blog = () => {
       )
     })}
   </div>
+  
   )
 };
 export default Blog;

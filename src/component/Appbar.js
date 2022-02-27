@@ -4,12 +4,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+
 const Appbar = ({setPage}) => {
 
   return <div>
       <AppBar>
       <Toolbar>
-        <Button color="inherit">Home</Button>
+        <Button color="inherit" onClick={()=> setPage(true)}>Home</Button>
           <Button variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={()=> setPage(false)}>
             Blog
           </Button>
